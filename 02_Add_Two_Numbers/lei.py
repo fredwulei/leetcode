@@ -18,9 +18,8 @@ class Solution:
     		v1 = e1.val if e1!=None else 0
     		v2 = e2.val if e2!=None else 0
     		d = v1+v2+carry
-    		a = divmod(d,10)
-    		carry = a[0]
-    		l.next = ListNode(a[1])
+    		carry = d/10
+			l.next = ListNode(d%10)
     		l = l.next
     		e1 = e1.next if e1!=None else None
     		e2 = e2.next if e2!=None else None
